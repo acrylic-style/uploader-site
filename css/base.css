@@ -1,0 +1,90 @@
+.center {
+float: center;
+text-align: center;
+}
+
+.left {
+text-align: left;
+}
+
+.right {
+text-align: right;
+}
+
+string.red {
+color: #ff0000;
+}
+
+string.green {
+color: #00ff00;
+}
+
+string.blue {
+color: #0000ff;
+}
+
+string.yellow {
+color: #ffff00;
+}
+
+string.white {
+color: #ffffff;
+}
+
+string.black {
+color: #000000;
+}
+
+pre.gray {
+border: 2px #c0c0c0 solid;
+background-color: #efefef;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MSP Gothic';
+}
+
+pre.red {
+border: 2px #c0c0c0 solid;
+background-color: #ff0000;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MS PGothic';
+}
+
+pre.blue {
+border: 2px #c0c0c0 solid;
+background-color: #0000ff;
+color: #ffffff;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MS PGothic';
+}
+
+pre.blue2 {
+border: 2px #c0c0c0 solid;
+background-color: #0000aa;
+margin: 0 auto;
+color: #ffffff;
+width: 30%;
+height: 5%;
+overflow: auto;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MS PGothic';
+line-height: 200%;
+}
+
+mark {
+/*border: 2px #c0c0c0 solid;
+background-color: #ffff00;*/
+color: #000000;
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MS PGothic';
+}
+
+func.type {
+font-weight: bold;
+color: #33ff33;
+font-size: 16px;
+}
+
+.font {
+font-size: 16px;
+font-family: 'ＭＳＰ ゴシック', 'ＭＳ Ｐ ゴシック', 'ＭＳ Ｐゴシック', 'MS PGothic';
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Uploader</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<h1>Uploader</h1>
+                                <p id="status" style="display: none;"><a href="" id="statuslink"></a></p>
+			</header>
+                <!-- Script -->
+                        <script>
+                                if (location.href.split("#").length-1) {
+                                        document.getElementById("status").style = "";
+                                        if (location.href.split("#")[1] === 'notspecified') {
+                                                document.getElementById("status").textContent = "You didn't specify the file.";
+                                        } else if (location.href.split("#")[1] === 'error') {
+                                                document.getElementById("status").textContent = "Something went wrong while uploading your file...";
+                                        } else {
+                                                document.getElementById("statuslink").href = "https://um.acrylicstyle.xyz/" + location.href.split("#")[1];
+                                                document.getElementById("statuslink").textContent = "Uploaded. Click here to download.";
+                                        }
+                                }
+                        </script>
+
+		<!-- Upload Form -->
+			<form method="post" action="/upload.php" enctype="multipart/form-data">
+                                <p><input class="font" type="text" name="p" placeholder="Upload password for upload to certain locations" id="upwd" size="30" /></p>
+                                <p><input class="font" type="file" name="upfile" value="Upload" /></p>
+				<input type="submit" value="Upload" />
+			</form>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://github.com/acrylic-style" class="icon fa-github"><span class="label">GitHub</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Let Me Hit It aka Acrylic Style.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
