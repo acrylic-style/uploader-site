@@ -17,7 +17,22 @@
       <h1>Uploader</h1>
       <p id="status" style="display: none;"><a href="" id="statuslink"></a></p>
     </header>
-    <!-- Script -->
+    <!-- Upload Form -->
+    <form method="post" action="/upload.php" enctype="multipart/form-data">
+      <p><input id="password" class="font" type="text" name="p" placeholder="Upload password for upload to certain locations" id="upwd" size="30" /></p>
+      <p><input class="font" type="file" name="upfile" value="Upload" /></p>
+      <input type="submit" value="Upload" />
+    </form>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://github.com/acrylic-style" class="icon fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Let Me Hit It aka Acrylic Style.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </footer>
+    <!-- Scripts -->
     <script>
       if (location.href.split('#').length-1) {
         const sharp = location.href.split('#')[1]
@@ -35,22 +50,6 @@
         }
       }
     </script>
-    <!-- Upload Form -->
-    <form method="post" action="/upload.php" enctype="multipart/form-data">
-      <p><input id="password" class="font" type="text" name="p" placeholder="Upload password for upload to certain locations" id="upwd" size="30" /></p>
-      <p><input class="font" type="file" name="upfile" value="Upload" /></p>
-      <input type="submit" value="Upload" />
-    </form>
-    <!-- Footer -->
-    <footer id="footer">
-      <ul class="icons">
-        <li><a href="https://github.com/acrylic-style" class="icon fa-github"><span class="label">GitHub</span></a></li>
-      </ul>
-      <ul class="copyright">
-        <li>&copy; Let Me Hit It aka Acrylic Style.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-      </ul>
-    </footer>
-    <!-- Scripts -->
     <script src="assets/js/main.js"></script>
   </body>
 </html>
