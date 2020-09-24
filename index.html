@@ -22,7 +22,10 @@
       if (location.href.split('#').length-1) {
         const sharp = location.href.split('#')[1]
         document.getElementById("status").style = ''
-        if (sharp === 'notspecified') {
+        if (sharp.startsWith('password=')) {
+          const pw = sharp.split('=')[1]
+          document.getElementById('password').value = pw
+        } else if (sharp === 'notspecified') {
           document.getElementById('status').textContent = 'You didn\'t specify the file.'
         } else if (location.href.split("#")[1] === 'error') {
           document.getElementById('status').textContent = 'Something went wrong while uploading your file...'
