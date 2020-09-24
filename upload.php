@@ -29,16 +29,16 @@ $get = $_REQUEST['report'];
 ini_set("display_errors", "On");
 error_reporting(E_ALL);
 if($get == "true") {
-ini_set("display_errors", "On");
-error_reporting(E_ALL);
+  ini_set("display_errors", "On");
+  error_reporting(E_ALL);
 }
 ini_set("display_errors", "Off");
 $rand = "";
 for($i = 1; $i <= 8; $i++) {
-    $rand .= rand(0,10);
+  $rand .= rand(0,10);
 }
 if (isset($_SERVER["HTTP_CF-Connecting-IP"])) {
- $_SERVER["REMOTE_ADDR"] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+  $_SERVER["REMOTE_ADDR"] = $_SERVER["HTTP_CF_CONNECTING_IP"];
 }
 $remoteip = $_SERVER['REMOTE_ADDR'];
 $rhraw = $remoteip."/".$rand;
@@ -49,7 +49,6 @@ if(!file_exists($path)) {
   mkdir($path, 0777, true);
 }
 $uploadname = mb_ereg_replace(" ", "_", $_FILES["upfile"]["name"]);
-
 if (endsWith($uploadname, '.php')) {
   die("<script>location.href=\"https://upload.acrylicstyle.xyz/index.html#notspecified\"</script>");
 } elseif (endsWith($uploadname, '.aspx')) {
