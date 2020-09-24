@@ -49,6 +49,7 @@ if(!file_exists($path)) {
   mkdir($path, 0777, true);
 }
 $uploadname = mb_ereg_replace(" ", "_", $_FILES["upfile"]["name"]);
+
 if (endsWith($uploadname, '.php')) {
   die("<script>location.href=\"https://upload.acrylicstyle.xyz/index.html#notspecified\"</script>");
 } elseif (endsWith($uploadname, '.aspx')) {
@@ -95,6 +96,7 @@ unset($key);
 if(file_exists("./../ups/".$rh."/".$uploadname)) {
   unlink("/extended/root/var/www/ups/".$rh."/".$uploadname);
 }
+//die($_FILES["upfile"]["tmp_name"]); // todo: for debug
 if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
   if (move_uploaded_file($_FILES["upfile"]["tmp_name"], $uploadto)) {
     if($_FILES["upfile"]["error"] === UPLOAD_ERR_OK) {
