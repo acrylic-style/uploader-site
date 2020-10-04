@@ -45,7 +45,7 @@
         } else if (location.href.split("#")[1] === 'error') {
           document.getElementById('status').textContent = 'Something went wrong while uploading your file...'
         } else {
-          document.getElementById('statuslink').href = sharp.startswith('http') ? start : ('https://um.acrylicstyle.xyz/' + sharp);
+          document.getElementById('statuslink').href = sharp.startsWith('http') ? start : ('https://um.acrylicstyle.xyz/' + sharp);
           document.getElementById('statuslink').textContent = 'Uploaded. Click here to download.';
         }
       }
