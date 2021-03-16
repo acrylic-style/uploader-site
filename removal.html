@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<!--
+  Eventually by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Uploader</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <span>I allow anyone to upload any file, but they might upload files that violate the rights of others.</span>
+    <span>If you've found any contents that violate your rights, please email me at <i>copyright@acrylicstyle.xyz</i>.</span>
+    <span>Spamming/Abusing the email might cause your email address to be ignored permanently.</span>
+    <p><a href="/">Go back</a></p>
+    <!-- Footer -->
+    <footer id="footer">
+      <ul class="icons">
+        <li><a href="https://github.com/acrylic-style" class="icon fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+      <ul class="copyright">
+        <li>&copy; Acrylic Style</li><li>Powered by <a href="http://html5up.net">HTML5 UP</a></li><li><a href="/">Go back</a></li>
+      </ul>
+    </footer>
+    <!-- Scripts -->
+    <script>
+      if (location.href.split('#').length-1) {
+        const sharp = location.href.split('#')[1]
+        document.getElementById("status").style = ''
+        if (sharp.startsWith('password=')) {
+          const pw = sharp.split('=')[1]
+          document.getElementById('password').value = pw
+        } else if (sharp === 'notspecified') {
+          document.getElementById('status').textContent = 'You didn\'t specify the file.'
+        } else if (location.href.split("#")[1] === 'error') {
+          document.getElementById('status').textContent = 'Something went wrong while uploading your file...'
+        } else {
+          document.getElementById('statuslink').href = sharp.startsWith('http') ? start : ('https://um.acrylicstyle.xyz/' + sharp);
+          document.getElementById('statuslink').textContent = 'Uploaded. Click here to download.';
+        }
+      }
+    </script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
